@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #answer { margin-top: 20px; font-size: 24px; }
+    </style>
+</head>
+<body>
+    <h1>Magic 8 Ball</h1>
+    <input type="text" id="question" placeholder="Ask your question here">
+    <button onclick="getAnswer()">Ask</button>
+    <div id="answer"></div>
+
+    <script>
+        const answers = [
+            "Yes.",
+            "No.",
+            "Ask again later.",
+            "Definitely.",
+            "Don't count on it.",
+            "Yes, in due time.",
+            "My sources say no.",
+            "Absolutely!",
+            "Very doubtful."
+        ];
+
+        function getAnswer() {
+            const randomIndex = Math.floor(Math.random() * answers.length);
+            document.getElementById('answer').innerText = answers[randomIndex];
+        }
+    </script>
+</body>
+</html>
